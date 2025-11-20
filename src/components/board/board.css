@@ -1,0 +1,17 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 24px; 
+  background-color: #f4f6f8; 
+  padding: 30px;
+  border-radius: 16px; 
+  
+  height: 100%; 
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+}

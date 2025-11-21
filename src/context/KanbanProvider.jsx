@@ -126,11 +126,29 @@ export const KanbanProvider = ({ children }) => {
     });
   };
 
+  const editTask = (taskId, newTitle) => {
+      setTasks(prevTasks => {
+          const newTasksState = { ...prevTasks };
+          const safeTaskId = String(taskId);
+
+          for (const columnName in newTasksState) {
+              newTasksState[columnName] = newTasksState[columnName].map(task => {
+                  return String(task.id) === safeTaskId
+                      ? { ...task, title: newTitle }
+                      : task;
+              });
+          }
+
+          return newTasksState;
+      })
+  }
+
   const contextValue = {
     tasks,
     addTask,
     moveTask,
     deleteTask,
+    editTask,
   };
 
   return (

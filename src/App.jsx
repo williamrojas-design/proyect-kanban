@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { KanbanProvider } from '../src/context/KanbanProvider';
+import { KanbanProvider } from './context/KanbanProvider.jsx';
 import { Board } from './components/board/Board';
 import { SearchFilter } from './components/searchFilter/SearchFilter';
 import './App.css';

@@ -37,15 +37,6 @@ export const NewTaskForm = ({ setIsOpen }) => {
             type="button" 
             className="cancel-button"
             onClick={() => setIsOpen(false)}
-            style={{
-               background: '#e0e0e0', 
-               border: 'none', 
-               borderRadius: '4px', 
-               padding: '10px', 
-               cursor: 'pointer',
-               fontWeight: 'bold',
-               color: '#333'
-            }}
           >
             Cancelar
           </button>

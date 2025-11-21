@@ -8,7 +8,7 @@ export const KanbanProvider = ({ children }) => {
     done: [],
   });
 
-  // Prevents overwriting localStorage with initial empty state before data is loaded
+  // Prevents overwriting localStorage with an initial empty state before data is loaded
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
